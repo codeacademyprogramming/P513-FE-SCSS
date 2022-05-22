@@ -1,0 +1,39 @@
+$primary-color: red;
+$secondary-color: rgba(255, 0, 0, 0.748);
+$tertiary-color: rgb(255, 0, 10);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-color;
+  color: black;
+}
+
+.header {
+  background-color: blue;
+
+  &__nav {
+    width: 60%;
+
+    &__link-list {
+      display: flex;
+
+      &__item {
+        margin-right: 10px;
+
+        &__link {
+          text-decoration: none;
+          color: black;
+
+          &--red {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
