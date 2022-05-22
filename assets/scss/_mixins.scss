@@ -1,0 +1,11 @@
+@mixin flexbox($alignItems: center, $justifyContent: center) {
+  display: flex;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+
+@mixin underTabletOnly() {
+  @media only screen and (max-width: 900px) {
+    @content;
+  }
+}

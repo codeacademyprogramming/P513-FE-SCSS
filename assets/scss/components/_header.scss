@@ -1,0 +1,33 @@
+.header {
+  background-color: blue;
+
+  &__nav {
+    width: 60%;
+
+    &__link-list {
+      @include flexbox();
+
+      &__item {
+        margin-right: 10px;
+        @include underTabletOnly {
+          color: blue;
+        }
+
+        @include flexbox(flex-end, space-between);
+
+        &__link {
+          text-decoration: none;
+          color: black;
+
+          &--red {
+            color: $primary-color;
+          }
+
+          @include underTabletOnly {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
